@@ -1,0 +1,29 @@
+// Place all the styles related to the first controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.app{
+  div.menus{
+    div.menu{
+      float: left;
+      width: 100px;
+      background-color: #346299;
+      padding: 15px;
+      padding-top: 20px;
+      border-right: 1px solid #cccccc;
+
+      a {
+        color: #ffffff;
+      }
+
+      a.active{
+        color: #efe250;
+      }
+    }
+  }
+
+  div.clear{
+    clear: both;
+  }
+
+}
