@@ -1,4 +1,5 @@
 import {connect} from "react-redux"
+import { withRouter } from 'react-router-dom'
 import {counter_increment, counter_decrement} from "../actions/index"
 import Counter from "../components/Counter"
 
@@ -19,6 +20,6 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const CCounter = connect(mapStateToProps, mapDispatchToProps)(Counter)
+const CCounter = withRouter(connect(mapStateToProps, mapDispatchToProps)(Counter))
 
 export default CCounter

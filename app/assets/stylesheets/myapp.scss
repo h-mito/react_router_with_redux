@@ -3,9 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 div.app{
-  div.menus{
-    div.menu{
+  ul.menus{
+    margin: 0;
+    padding: 0;
+
+    li{
       float: left;
+      list-style: none;
       width: 100px;
       background-color: #346299;
       padding: 15px;

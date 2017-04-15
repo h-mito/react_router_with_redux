@@ -1,5 +1,5 @@
 import React from "react"
-import {Link} from "react-router"
+import {NavLink} from "react-router-dom"
 
 class App extends React.Component {
 
@@ -8,20 +8,12 @@ class App extends React.Component {
       <div className="app">
         <h1>This is React Redux ReactRouter App</h1>
         <div>
-          <div className="menus">
-            <div className="menu">
-              <Link to="/myapp/index" onlyActiveOnIndex activeClassName="active">Top</Link>
-            </div>
-            <div className="menu">
-              <Link to="/myapp/counter" activeClassName="active">Counter</Link>
-            </div>
-            <div className="menu">
-              <Link to="/myapp/about" activeClassName="active">About</Link>
-            </div>
-            <div className="menu">
-              <Link to="/myapp/contact" activeClassName="active">Contact</Link>
-            </div>
-          </div>
+          <ul className="menus">
+            <li><NavLink to="/myapp/index" activeClassName="active">Top</NavLink></li>
+            <li><NavLink to="/myapp/counter" activeClassName="active">Counter</NavLink></li>
+            <li><NavLink to="/myapp/about" activeClassName="active">About</NavLink></li>
+            <li><NavLink to="/myapp/contact" activeClassName="active">Contact</NavLink></li>
+          </ul>
         </div>
         <div className="clear">
         </div>
