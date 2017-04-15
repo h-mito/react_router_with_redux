@@ -1,9 +1,11 @@
 import React from "react"
-import {NavLink} from "react-router-dom"
+import {NavLink, withRouter} from "react-router-dom"
 
 class App extends React.Component {
 
   render(){
+    console.log(this.props.location.pathname)
+
     return (
       <div className="app">
         <h1>This is React Redux ReactRouter App</h1>
@@ -17,10 +19,15 @@ class App extends React.Component {
         </div>
         <div className="clear">
         </div>
-        {this.props.children}
+        <div className="contents">
+          {this.props.children}
+        </div>
+        <div className="footer">
+          Footer
+        </div>
       </div>
     )
   }
 }
 
-export default App
+export default withRouter(App)
