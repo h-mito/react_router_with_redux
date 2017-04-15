@@ -1,6 +1,6 @@
 import React from "react"
 import {Provider} from "react-redux"
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import { BrowserRouter as Router, Route} from "react-router-dom"
 import App from "./App"
 import Top from "./Top"
 import About from "./About"
@@ -13,18 +13,16 @@ const Root = ({store}) => {
   return (
     <Provider store={store}>
       <Router>
-        <Switch>
-          <App>
-            <Route component={({match}) =>
-              <div>
-                <Route path="/myapp/index" component={Top} />
-                <Route path="/myapp/about" component={About} />
-                <Route path="/myapp/contact" component={Contact} />
-                <Route path="/myapp/counter" component={CCounter} />
-              </div>
-            }/>
-          </App>
-        </Switch>
+        <App>
+          <Route component={({match}) =>
+            <div>
+              <Route path="/myapp/index" component={Top} />
+              <Route path="/myapp/about" component={About} />
+              <Route path="/myapp/contact" component={Contact} />
+              <Route path="/myapp/counter" component={CCounter} />
+            </div>
+          }/>
+        </App>
       </Router>
     </Provider>
   )
